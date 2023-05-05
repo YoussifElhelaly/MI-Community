@@ -1,0 +1,333 @@
+@font-face {
+    font-family: Cairo;
+    src: url(../fonts/Cairo-VariableFont_slnt\,wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+body {
+    font-family: Cairo;
+    background-color: #F0F2F5;
+}
+
+/* start left side  */
+
+.home .special.col-md-3 {
+    width: 120px;
+    transition: 0.3s;
+}
+
+.home .special.col-md-3:hover {
+    width: calc(100%/12 *2);
+}
+
+.home .leftSide {
+    position: sticky;
+    top: 60px;
+}
+
+.home .leftSide .head {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.home .leftSide .head h3 {
+    font-weight: bolder;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    white-space: nowrap;
+    background: -webkit-linear-gradient(270deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.home .leftSide .head img {
+    position: relative;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.home .special.col-md-3:hover .leftSide .head h3 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.home .special.col-md-3:hover .leftSide .head img {
+    transform: rotateY(180deg);
+
+}
+
+.home .leftSide {
+    height: calc(100vh - 170px);
+}
+
+.home .leftSide ul .leftSideOption {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+
+.home .leftSide ul .leftSideOption span {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.home .special.col-md-3:hover ul .leftSideOption span {
+    opacity: 1;
+}
+
+.home .leftSide ul .leftSideOption::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.home .leftSide ul .leftSideOption:hover::before,
+.home .leftSide ul .leftSideOption.active::before {
+    opacity: 1;
+
+}
+
+.home .leftSide ul .leftSideOptions img {
+    position: relative;
+    z-index: 3;
+}
+
+.home .leftSide ul li.active,
+.home .leftSide ul li:hover {
+    color: white;
+}
+
+/* start post-wrapper  */
+
+.posts_wrapper .post {
+    padding: 20px;
+}
+
+.posts_wrapper .post .headPost .options {
+    position: relative;
+}
+
+.posts_wrapper .post .headPost .options i {
+    color: #919397;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.posts_wrapper .post .headPost .options .menu {
+    background: white;
+    box-shadow: #00000052 0px 0px 10px;
+    position: absolute;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    padding: 10px 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.posts_wrapper .post .headPost .options .menu.active {
+    width: 150px;
+    height: 85px;
+}
+
+.posts_wrapper .post .headPost .options .menu button {
+    width: 100%;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+    transition: 0.2s;
+    padding: 5px 15px;
+    font-size: 14px;
+    width: 150px;
+}
+
+.posts_wrapper .post .headPost .options .menu button:hover {
+    background-color: black;
+    color: white;
+}
+
+.posts_wrapper .post .headPost .info {
+    gap: 20px;
+}
+
+.posts_wrapper .post .headPost .info .img {
+    width: 50px
+}
+
+.posts_wrapper .post .headPost .info h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.posts_wrapper .post .headPost .info h2 span,
+.posts_wrapper .post .headPost .info p {
+    font-size: 16px;
+    color: #919397;
+}
+
+.posts_wrapper .post .captionPost {
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.posts_wrapper .post .mediaPost img {
+    border-radius: 10px;
+}
+
+.posts_wrapper .post .actionPost ul li,
+.posts_wrapper .post .actionPost .save {
+    cursor: pointer;
+}
+
+.posts_wrapper .post .actionPost .love.active {
+    color: red;
+}
+
+.posts_wrapper .post .actionPost .comment.active {
+    color: blue;
+}
+
+.posts_wrapper .post .actionPost .save.active {
+    color: goldenrod;
+}
+
+.posts_wrapper .post .commentSection {
+    height: 0;
+    overflow: hidden;
+    border-top: 1px solid black;
+    transition: 0.3s;
+}
+
+.posts_wrapper .post .commentSection.active {
+    height: 600px;
+    padding: 20px 0;
+}
+
+.posts_wrapper .post .commentSection .commentSort select {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+}
+
+
+.posts_wrapper .post .commentPost_wrapper {
+    height: 450px;
+    overflow: auto;
+}
+
+.posts_wrapper .post .commentPost_wrapper .comment .commentDetails {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.posts_wrapper .post .commentPost_wrapper .comment .commentDetails .commentIMG {
+    width: 50px;
+}
+
+.posts_wrapper .post .commentPost_wrapper .comment .commentDetails .commentInfo h3 {
+    font-size: 18px;
+}
+
+.posts_wrapper .post .commentPost_wrapper .comment .commentDetails .commentInfo p {
+    font-size: 14px;
+}
+
+.posts_wrapper .post .commentPost_wrapper .comment .commentReaction {
+    margin: 5px 70px;
+}
+
+.posts_wrapper .post .commentSection .form input {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+.posts_wrapper .post .commentSection .form input:focus {
+    outline: none;
+}
+
+.posts_wrapper .post .commentSection .form .img {
+    width: 50px;
+}
+
+.posts_wrapper .post .commentSection .form .addComment {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.posts_wrapper .post .commentSection .form .actions button {
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.posts_wrapper .post .commentSection .form input+.actions>i {
+    transition: 0.3s;
+}
+
+.posts_wrapper .post .commentSection .form input:focus+.actions>i {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.posts_wrapper .post .commentSection .form input:focus+.actions button {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* end post-wrapper  */
