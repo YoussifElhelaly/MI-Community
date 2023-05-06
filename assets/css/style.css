@@ -9,6 +9,21 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(3, 132, 244, 1);
+    border-radius: 10px;
+}
+
 ul {
     list-style: none;
     padding: 0%;
@@ -35,18 +50,125 @@ body {
 
 /* start left side  */
 
-.home .special.col-md-3 {
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F0F2F5;
+    z-index: 999;
+}
+
+nav .search input {
+    background-color: #eee;
+    width: calc(100vw / 12 * 5);
+    transform: translateX(-60px);
+    transition: 0.3s;
+}
+
+nav .profile-info ul li {
+    position: relative;
+    width: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav .profile-info>ul>.notifi .img img {
+    width: 25px;
+}
+
+nav .profile-info>ul>.notifi .img {
+    width: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+    color: rgba(3, 132, 244, 1);
+
+}
+
+nav .profile-info>ul>li.active .img {
+    width: 140px;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+nav .profile-info ul li.notifi.active {
+    width: 140px;
+}
+
+nav .profile-info ul .notifi_wrapper {
+    position: absolute;
+    background: white;
+    width: 300px;
+    height: 0px;
+    left: -50px;
+    top: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px black;
+    box-shadow: #00000052 0px 0px 10px
+}
+
+nav .profile-info ul .notifi_wrapper .setting a {
+    color: rgba(3, 132, 244, 1);
+
+}
+
+nav .profile-info ul li.notifi.active+.notifi_wrapper {
+    height: 400px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .profile-info ul .notifi_wrapper .notifiBox {
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+nav .profile-info ul .notifi_wrapper .notifiBox .img {
+    width: 50px;
+}
+
+nav .profile-info ul .notifi_wrapper .notifiBox .info {
+    width: calc(100% - 66px);
+}
+
+nav .profile-info ul .notifi_wrapper .notifiBox .info h4 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav .profile-info ul .notifi_wrapper .notifiBox .info p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.home {
+    height: calc(100vh - 127px);
+    padding-top: 127px !important;
+}
+
+
+.home .special.col-md-2 {
     width: 120px;
     transition: 0.3s;
 }
 
-.home .special.col-md-3:hover {
+.home .special.col-md-2:hover {
     width: calc(100%/12 *2);
 }
 
 .home .leftSide {
     position: sticky;
-    top: 60px;
+    top: 127px;
 }
 
 .home .leftSide .head {
@@ -77,12 +199,12 @@ body {
     padding: 10px;
 }
 
-.home .special.col-md-3:hover .leftSide .head h3 {
+.home .special.col-md-2:hover .leftSide .head h3 {
     opacity: 1;
     visibility: visible;
 }
 
-.home .special.col-md-3:hover .leftSide .head img {
+.home .special.col-md-2:hover .leftSide .head img {
     transform: rotateY(180deg);
 
 }
@@ -108,7 +230,7 @@ body {
     transition: 0.3s;
 }
 
-.home .special.col-md-3:hover ul .leftSideOption span {
+.home .special.col-md-2:hover ul .leftSideOption span {
     opacity: 1;
 }
 
@@ -137,6 +259,57 @@ body {
 .home .leftSide ul li.active,
 .home .leftSide ul li:hover {
     color: white;
+}
+
+/* start create post  */
+
+.middle .createPost .head .img {
+    width: 56px;
+}
+
+
+.middle .createPost .head input {
+    background-color: #F0F2F5;
+    border: none;
+
+}
+
+.middle .createPost .media {
+    padding-top: 15px;
+    border-top: 4px solid #F0F2F5;
+    margin-top: 20px;
+}
+
+.middle .createPost .media ul {
+    display: flex;
+    gap: 20px;
+}
+
+.middle .createPost .media ul li {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.middle .createPost .media ul li .img {
+    cursor: pointer;
+}
+
+.middle .createPost .media ul li img {
+    width: 18px;
+}
+
+.middle .createPost .media ul li input[type="file"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.middle .createPost .media ul li input[type="file"]>input {
+    cursor: pointer
 }
 
 /* start post-wrapper  */
@@ -331,3 +504,132 @@ body {
 }
 
 /* end post-wrapper  */
+
+.home .chat ul {
+    border-bottom: 4px solid #919397;
+}
+
+.home .chat ul li {
+    position: relative;
+    /* background: -webkit-linear-gradient(270deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    padding-bottom: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+    color: #919397;
+    cursor: pointer;
+}
+
+.home .chat ul li.active,
+.home .chat ul li:hover {
+    color: rgba(3, 132, 244, 1);
+
+}
+
+.home .chat ul li::before {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid rgba(3, 132, 244, 1);
+    width: 0%;
+    z-index: 2;
+    bottom: -4px;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.home .chat ul li:hover::before,
+.home .chat ul li.active::before {
+    opacity: 1;
+    width: 105%;
+}
+
+.home .chat ul a {
+    color: rgba(3, 132, 244, 1);
+}
+
+.home .chat .friend_wrapper {
+    height: 250px;
+    overflow: auto;
+}
+
+.home .chat .friend_wrapper .friend {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.home .chat .friend_wrapper .friend .img {
+    width: 60px
+}
+
+.home .chat .friend_wrapper .friend .info h4 {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    padding-right: 15px;
+    font-size: 18px;
+    width: fit-content;
+}
+
+.home .chat .friend_wrapper .friend .info h4 .online,
+.home .chat .friend_wrapper .friend .info h4 .offline {
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.home .chat .friend_wrapper .friend .info h4 .online {
+
+    background-color: #1DD93B;
+}
+
+.home .chat .friend_wrapper .friend .info h4 .offline {
+
+    background-color: red;
+}
+
+.home .chat .friend_wrapper .friend .info p {
+    white-space: nowrap;
+    margin: 0;
+    font-size: 12px;
+    color: #919397;
+    width: 110px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.home .rightSide {
+    position: sticky;
+    top: 127px;
+    height: calc(100vh - 127px);
+    overflow: auto;
+    padding-bottom: 30px;
+}
+
+.home .rightSide::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.myCommunity_wrapper {
+    height: 365px;
+    overflow: auto;
+}
+
+.myCommunity_wrapper .community {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.myCommunity_wrapper .community .img {
+    width: 60px;
+}
