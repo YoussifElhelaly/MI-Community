@@ -1,237 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Hi</title>
-    <link rel="stylesheet" href="./style/signing.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi</title>
+  <link rel="stylesheet" href="./assets/css/signing.css" />
 
-  <body>
-    <div class="container">
-      <div class="image">
-        <img class="img" src="./assets/form-1.png" alt="" />
-      </div>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+</head>
 
-      <div class="form-container" id="form-1">
-        <!-- THEME SWITCH -->
-        <div class="theme-switch-wrapper">
-          <label class="theme-switch" for="checkbox">
-            <input class="switch" type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-          <em>Dark Mode</em>
-        </div>
-        <!-- THEME SWITCH -->
-        <span class="sign-up"
-          >Not a member?
-          <a href="#" class="register">Register now</a></span
-        >
-
-        <div class="title">
-          <h1>Hello</h1>
-          <h2>Welcome back you've been missed!</h2>
-        </div>
-
-        <form name="signin" class="form">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="input-email input"
-            placeholder="Email or Username"
-            autofocus
-          />
-
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="input-password input"
-            placeholder="Password"
-          />
-
-          <button type="submit" class="btn-sign-in btn">
-            Sign In
-          </button>
-          <a href="#" class="recovery" style="margin-top: 0.8em"
-            >Recovery Password</a
-          >
-        </form>
-        <hr />
-        <div class="social-container">
-          <img src="./assets/facebook-sign.svg" alt="" />
-          <img src="./assets/linkedin-sign.svg" alt="" />
-          <img src="./assets/gmail-sign.svg" alt="" />
-        </div>
-      </div>
-      <div
-        class="form-container"
-        id="form-choice"
-        style="display: none"
-      >
-        <div class="title">
-          <h1>Sign-up</h1>
-          <h2>please choice your account type</h2>
-        </div>
-
-        <form name="signin" class="form choices">
-          <button type="submit" class="btn-cta-choice" id="user">
-            User
-          </button>
-          <button type="submit" class="btn-cta-choice" id="places">
-            Places
-          </button>
-        </form>
-      </div>
-
-      <div class="form-container" id="form-2" style="display: none">
-        <div class="title">
-          <h1>Welcome to Hi Community</h1>
-          <h2>Register you account</h2>
-        </div>
-
-        <form name="signin" class="form">
-          <input
-            type="text"
-            name="username"
-            id="username"
-            class="input"
-            placeholder="Username"
-            autofocus
-            required
-          />
-
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="input"
-            placeholder="Email"
-            autofocus
-            required
-          />
-
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="input"
-            placeholder="Password"
-            required
-          />
-          <input
-            type="date"
-            name="date"
-            id="date"
-            class="input"
-            placeholder="Date of birth"
-            required
-          />
-          <select name="gender" class="input drop" required>
-            <option value="gender">gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <button type="button" class="btn" id="btn-2">
-            Continue
-          </button>
-        </form>
-      </div>
-      <div class="form-container" id="form-3" style="display: none">
-        <div class="title">
-          <h1>Complete the data entry</h1>
-        </div>
-
-        <form name="signin" class="form">
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            class="input"
-            placeholder="Phone"
-            autofocus
-            required
-          />
-          <select id="country" name="country" class="input drop">
-            <option value="Egypt">Egypt</option>
-          </select>
-
-          <input
-            type="text"
-            name="area"
-            id="area"
-            class="input"
-            placeholder="Area"
-            required
-          />
-          <input
-            type="text"
-            name="education"
-            id="education"
-            class="input"
-            placeholder="Education"
-            required
-          />
-          <input
-            type="text"
-            name="job"
-            id="job"
-            class="input"
-            placeholder="Job Title"
-            required
-          />
-
-          <button type="button" id="btn-3" class="btn">
-            Continue
-          </button>
-        </form>
-        <!-- END -->
-      </div>
-      <div class="form-container" id="form-4" style="display: none">
-        <div class="title">
-          <h1>Complete the data entry</h1>
-        </div>
-
-        <form name="signin" class="form">
-          <textarea
-            name="message"
-            id="message"
-            rows="5"
-            class="text-area input"
-            placeholder="About you"
-            name="email"
-            id="email"
-            required
-          ></textarea>
-
-          <input
-            class="input tags tagify--hasMaxTags"
-            name="basic"
-            value=""
-            placeholder="Enter your hobbis or intersts"
-          />
-
-          <button type="button" id="btn-2" class="btn">
-            Continue
-          </button>
-        </form>
-      </div>
+<body>
+  <div class="container">
+    <div class="image">
+      <img class="img" src="./assets/img/form-1.png" alt="" />
     </div>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/signing.js"></script>
-  </body>
+    <div class="form-container" id="form-1">
+      <span class="sign-up">Not a member?
+        <a href="#" class="register">Register now</a></span>
+
+      <div class="title">
+        <h1>Hello</h1>
+        <h2>Welcome back you've been missed!</h2>
+      </div>
+
+      <form name="signin" class="form">
+        <input type="email" name="email" id="email" class="input-email input" placeholder="Email or Username"
+          autofocus />
+
+        <input type="password" name="password" id="password" class="input-password input" placeholder="Password" />
+
+        <button type="submit" class="btn-sign-in btn">
+          Sign In
+        </button>
+        <a href="#" class="recovery" style="margin-top: 0.8em">Recovery Password</a>
+      </form>
+      <hr />
+      <div class="social-container">
+        <img src="./assets/img/facebook-sign.svg" alt="" />
+        <img src="./assets/img/linkedin-sign.svg" alt="" />
+        <img src="./assets/img/gmail-sign.svg" alt="" />
+      </div>
+    </div>
+    <div class="form-container" id="form-choice" style="display: none">
+      <div class="title">
+        <h1>Sign-up</h1>
+        <h2>please choice your account type</h2>
+      </div>
+
+      <form name="signin" class="form choices">
+        <button type="submit" class="btn-cta-choice" id="user">
+          User
+        </button>
+        <button type="submit" class="btn-cta-choice" id="places">
+          Places
+        </button>
+      </form>
+    </div>
+
+    <div class="form-container" id="form-2" style="display: none">
+      <div class="title">
+        <h1>Welcome to Hi Community</h1>
+        <h2>Register you account</h2>
+      </div>
+
+      <form name="signin" class="form">
+        <input type="text" name="username" id="username" class="input" placeholder="Username" autofocus required />
+
+        <input type="email" name="email" id="email" class="input" placeholder="Email" autofocus required />
+
+        <input type="password" name="password" id="password" class="input" placeholder="Password" required />
+        <input type="date" name="date" id="date" class="input" placeholder="Date of birth" required />
+        <select name="gender" class="input drop" required>
+          <option value="gender">gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <button type="button" class="btn" id="btn-2">
+          Continue
+        </button>
+      </form>
+    </div>
+    <div class="form-container" id="form-3" style="display: none">
+      <div class="title">
+        <h1>Complete the data entry</h1>
+      </div>
+
+      <form name="signin" class="form">
+        <input type="tel" name="phone" id="phone" class="input" placeholder="Phone" autofocus required />
+        <select id="country" name="country" class="input drop">
+          <option value="Egypt">Egypt</option>
+        </select>
+
+        <input type="text" name="area" id="area" class="input" placeholder="Area" required />
+        <input type="text" name="education" id="education" class="input" placeholder="Education" required />
+        <input type="text" name="job" id="job" class="input" placeholder="Job Title" required />
+
+        <button type="button" id="btn-3" class="btn">
+          Continue
+        </button>
+      </form>
+      <!-- END -->
+    </div>
+    <div class="form-container" id="form-4" style="display: none">
+      <div class="title">
+        <h1>Complete the data entry</h1>
+      </div>
+
+      <form name="signin" class="form">
+        <textarea name="message" id="message" rows="5" class="text-area input" placeholder="About you" name="email"
+          id="email" required></textarea>
+
+        <input class="input tags tagify--hasMaxTags" name="basic" value=""
+          placeholder="Enter your hobbis or intersts" />
+
+        <button type="button" id="btn-2" class="btn">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/signing.js"></script>
+</body>
+
 </html>
