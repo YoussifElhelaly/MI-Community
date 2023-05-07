@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi</title>
+    <link rel="stylesheet" href="./assets/css/signing.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container" id="form-2">
+            <div class="title" style="margin: 0;">
+                <h1>Welcome to Hi Community</h1>
+                <h2>Register you account</h2>
+            </div>
+
+            <form name="signin" class="form">
+                <input type="text" name="username" id="username" class="input" placeholder="Username" autofocus
+                    required />
+
+                <input type="email" name="email" id="email" class="input" placeholder="Email" autofocus required />
+
+                <input type="password" name="password" id="password" class="input" placeholder="Password" required />
+                <input type="date" name="date" id="date" class="input" placeholder="Date of birth" required />
+                <select name="gender" class="input drop" required>
+                    <option value="gender">gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button type="button" class="btn" style="margin: 0;" id="btn-2">
+                    Continue
+                </button>
+            </form>
+            <hr />
+            <div class="social-container">
+                <img src="./assets/img/facebook-sign.svg" alt="" />
+                <img src="./assets/img/linkedin-sign.svg" alt="" />
+                <img src="./assets/img/gmail-sign.svg" alt="" />
+            </div>
+        </div>
+        <div class="image">
+            <img class="img" src="./assets/img/form-2.png" alt="" />
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/signing.js"></script>
+</body>
+
+</html>

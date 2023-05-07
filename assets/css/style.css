@@ -351,7 +351,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
     cursor: pointer;
 }
 
-.posts_wrapper .post .headPost .options .menu {
+.posts_wrapper .post .headPost .options .menu,
+.middle .about .aboutHead .menu {
     background: white;
     box-shadow: #00000052 0px 0px 10px;
     position: absolute;
@@ -363,12 +364,14 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
     transition: 0.3s;
 }
 
-.posts_wrapper .post .headPost .options .menu.active {
+.posts_wrapper .post .headPost .options .menu.active,
+.middle .about .aboutHead .menu.active {
     width: 150px;
     height: 85px;
 }
 
-.posts_wrapper .post .headPost .options .menu button {
+.posts_wrapper .post .headPost .options .menu button,
+.middle .about .aboutHead .menu button {
     width: 100%;
     text-align: start;
     border: none;
@@ -379,7 +382,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
     width: 150px;
 }
 
-.posts_wrapper .post .headPost .options .menu button:hover {
+.posts_wrapper .post .headPost .options .menu button:hover,
+.middle .about .aboutHead .menu button:hover {
     background-color: black;
     color: white;
 }
@@ -655,4 +659,62 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 
 .myCommunity_wrapper .community .img {
     width: 60px;
+}
+
+.profile .container-fluid>.row {
+    gap: 265px;
+}
+
+.profileUser .details .img {
+    height: 60px;
+    width: 158px;
+    position: relative;
+}
+
+.profileUser .details .img img {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profileUser .details .name h2 {
+    margin: 0;
+}
+
+.profileUser .details .name p {
+    font-weight: 500;
+}
+
+
+.profileUser .buttons button {
+    background-color: #16314E;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.profileUser .buttons button.edit {
+    padding: 4px 20px;
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+.middle .about {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.middle .about .aboutHead .options {
+    position: relative;
+}
+
+.middle .about .aboutHead .menu {
+    position: absolute;
+
 }

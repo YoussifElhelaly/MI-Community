@@ -206,4 +206,30 @@ body {
   transition: all 0.3s linear;
 }
 
+.intersts_wrapper {
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 15px 25px;
+  width: 100%;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 22px;
+  height: 120px;
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.intersts_wrapper .interst {
+  border: 1px solid black;
+  height: fit-content;
+  padding: 2px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=signing.css.map */
