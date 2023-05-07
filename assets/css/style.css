@@ -359,13 +359,16 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 
 .posts_wrapper .post .headPost .options,
 .introduction .introHead .options,
-.intersts .interstHead .options {
+.intersts .interstHead .options,
+.members .memberHead .options {
     position: relative;
 }
 
 .posts_wrapper .post .headPost .options i,
 .introduction .introHead .options i,
-.intersts .interstHead .options i {
+.intersts .interstHead .options i,
+.members .memberHead .options i {
+
     color: #919397;
     font-size: 22px;
     cursor: pointer;
@@ -374,7 +377,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .posts_wrapper .post .headPost .options .menu,
 .middle .about .aboutHead .menu,
 .introduction .introHead .options .menu,
-.intersts .interstHead .options .menu {
+.intersts .interstHead .options .menu,
+.members .memberHead .options .menu {
     background: white;
     box-shadow: #00000052 0px 0px 10px;
     position: absolute;
@@ -389,7 +393,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .posts_wrapper .post .headPost .options .menu.active,
 .middle .about .aboutHead .menu.active,
 .introduction .introHead .options .menu.active,
-.intersts .interstHead .options .menu.active {
+.intersts .interstHead .options .menu.active,
+.members .memberHead .options .menu.active {
     width: 150px;
     height: 85px;
 }
@@ -397,7 +402,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .posts_wrapper .post .headPost .options .menu button,
 .middle .about .aboutHead .menu button,
 .introduction .introHead .options .menu button,
-.intersts .interstHead .options .menu button {
+.intersts .interstHead .options .menu button,
+.members .memberHead .options .menu button {
     width: 100%;
     text-align: start;
     border: none;
@@ -411,7 +417,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .posts_wrapper .post .headPost .options .menu button:hover,
 .middle .about .aboutHead .menu button:hover,
 .introduction .introHead .options .menu button:hover,
-.intersts .interstHead .options .menu button:hover {
+.intersts .interstHead .options .menu button:hover,
+.members .memberHead .options .menu button:hover {
     background-color: black;
     color: white;
 }
@@ -702,9 +709,24 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .profileUser .details .img img {
     position: absolute;
     bottom: 0;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    z-index: 2;
+    margin-left: 5px;
+}
+
+
+.profileUser .details .img::before {
+    position: absolute;
+    content: "";
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    z-index: 41;
+    top: -85px;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .profileUser .details .name h2 {
@@ -743,7 +765,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 }
 
 .middle .about .aboutHead h2,
-.intersts .interstHead h2 {
+.intersts .interstHead h2,
+.members .memberHead h2 {
     font-size: 16px;
     color: #919397;
 }
@@ -760,7 +783,8 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 }
 
 .introduction,
-.intersts {
+.intersts,
+.members {
     padding: 20px;
     border-radius: 10px;
 }
@@ -774,6 +798,7 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 .introduction ul li {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .introduction ul li i {
@@ -816,4 +841,23 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 
 nav .search.profile {
     transform: translateX(calc(100vw / 12 * 1));
+}
+
+.members .members_wrapper .member {
+    width: 75px;
+    text-align: center;
+}
+
+.members .members_wrapper .member h2 {
+    font-size: 14px;
+}
+
+.members .members_wrapper .more {
+    background-color: #F8F8F8;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
