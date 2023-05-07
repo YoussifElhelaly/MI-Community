@@ -9,7 +9,7 @@ let commentSection = document.getElementById("commentSection")
 let savePostParent = document.getElementById("savePostParent")
 let notifictionWrapper = document.getElementById("notifictionWrapper")
 let special = document.getElementById("special")
-let SearchNav = document.getElementById("SearchNav")
+let specialNav = document.getElementById("specialNav")
 
 PostOptionBTN.addEventListener("click", () => {
     postOptionMenu.classList.toggle("active")
@@ -40,9 +40,9 @@ addEventListener("click", (e) => {
 })
 
 special.addEventListener("mouseenter", () => {
-    SearchNav.style.transform = 'translateX(0px)'
+    specialNav.style.width = 'calc(100%/12 *2)'
 })
 
 special.addEventListener("mouseleave", () => {
-    SearchNav.style.transform = 'translateX(-60px)'
+    specialNav.style.width = '120px'
 })
