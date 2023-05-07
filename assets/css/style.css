@@ -138,7 +138,6 @@ nav .profile-info ul .notifi_wrapper {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-    box-shadow: 2px 2px 2px black;
     box-shadow: #00000052 0px 0px 10px
 }
 
@@ -860,4 +859,73 @@ nav .search.profile {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.community .communityInfo .info .img {
+    position: relative;
+}
+
+.community .communityInfo .info .img img {
+    position: relative;
+
+}
+
+.community .communityInfo .info .img::before {
+    position: absolute;
+    content: "";
+    width: calc(100%);
+    height: calc(100% + 5px);
+
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 50%;
+    left: 0px;
+    top: -5px;
+    z-index: 0;
+}
+
+.community .communityInfo button {
+    background-color: #16314E;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.community .communityJoin h3 {
+    color: #919397;
+    font-size: 14px;
+}
+
+.community .communityJoin h4,
+.community .communityJoin h5 {
+    color: black;
+    font-size: 18px;
+}
+
+.community .communityJoin .about,
+.community .communityJoin .rules {
+    background-color: #E9E9E9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.community .communityJoin .rules ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.community .communityJoin .rules ul li {
+    margin: 5px 0;
+}
+
+.community .communityJoin button {
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(3, 92, 192, 1) 0%, rgba(3, 132, 244, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: #00000052 0px 0px 10px
 }
