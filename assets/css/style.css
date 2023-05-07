@@ -104,6 +104,22 @@ nav .profile-info>ul>li.active .img {
     padding: 4px 12px;
 }
 
+nav .profile-info ul li.notifi .num {
+    position: absolute;
+    left: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 nav .profile-info ul li.notifi.active {
     width: 140px;
 }
@@ -341,18 +357,24 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
     padding: 20px;
 }
 
-.posts_wrapper .post .headPost .options {
+.posts_wrapper .post .headPost .options,
+.introduction .introHead .options,
+.intersts .interstHead .options {
     position: relative;
 }
 
-.posts_wrapper .post .headPost .options i {
+.posts_wrapper .post .headPost .options i,
+.introduction .introHead .options i,
+.intersts .interstHead .options i {
     color: #919397;
     font-size: 22px;
     cursor: pointer;
 }
 
 .posts_wrapper .post .headPost .options .menu,
-.middle .about .aboutHead .menu {
+.middle .about .aboutHead .menu,
+.introduction .introHead .options .menu,
+.intersts .interstHead .options .menu {
     background: white;
     box-shadow: #00000052 0px 0px 10px;
     position: absolute;
@@ -365,13 +387,17 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 }
 
 .posts_wrapper .post .headPost .options .menu.active,
-.middle .about .aboutHead .menu.active {
+.middle .about .aboutHead .menu.active,
+.introduction .introHead .options .menu.active,
+.intersts .interstHead .options .menu.active {
     width: 150px;
     height: 85px;
 }
 
 .posts_wrapper .post .headPost .options .menu button,
-.middle .about .aboutHead .menu button {
+.middle .about .aboutHead .menu button,
+.introduction .introHead .options .menu button,
+.intersts .interstHead .options .menu button {
     width: 100%;
     text-align: start;
     border: none;
@@ -383,7 +409,9 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
 }
 
 .posts_wrapper .post .headPost .options .menu button:hover,
-.middle .about .aboutHead .menu button:hover {
+.middle .about .aboutHead .menu button:hover,
+.introduction .introHead .options .menu button:hover,
+.intersts .interstHead .options .menu button:hover {
     background-color: black;
     color: white;
 }
@@ -714,7 +742,78 @@ nav .profile-info ul .notifi_wrapper .notifiBox .info p {
     position: relative;
 }
 
+.middle .about .aboutHead h2,
+.intersts .interstHead h2 {
+    font-size: 16px;
+    color: #919397;
+}
+
+.middle .about .aboutHead .options i {
+    color: #919397;
+    font-size: 22px;
+    cursor: pointer;
+}
+
 .middle .about .aboutHead .menu {
     position: absolute;
 
+}
+
+.introduction,
+.intersts {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.introduction .introHead h2 {
+    font-size: 16px;
+    color: #919397;
+}
+
+
+.introduction ul li {
+    display: flex;
+    gap: 20px;
+}
+
+.introduction ul li i {
+    font-size: 15px;
+    width: 15px;
+}
+
+.intersts .interst_wrapper .interst {
+    padding: 0px 15px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: unset;
+}
+
+.intersts .interst_wrapper .interst:hover.yellow {
+    background-color: #FFB61D;
+    color: white;
+    border-color: #FFB61D;
+}
+
+.intersts .interst_wrapper .interst:hover.mov {
+    background-color: #4147D5;
+    border-color: #4147D5;
+    color: white;
+}
+
+.intersts .interst_wrapper .interst:hover.red {
+    background-color: #F05D6C;
+    border-color: #F05D6C;
+    color: white;
+}
+
+.intersts .interst_wrapper .interst:hover.green {
+    background-color: #10A916;
+    border-color: #10A916;
+    color: white;
+}
+
+nav .search.profile {
+    transform: translateX(calc(100vw / 12 * 1));
 }
